@@ -27,7 +27,8 @@ export function middleware(request: NextRequest) {
     "https://*.cloudworkstations.dev",
     "https://*.firebaseapp.com",
     "https://*.web.app",
-    "https://*.firebase-preview.app"
+    "https://*.firebase-preview.app",
+    "https://google-ai-studio.firebaseapp.com"
   ].join(' ');
 
   response.headers.set('Content-Security-Policy', `frame-ancestors ${frameAncestors}`);

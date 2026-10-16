@@ -4,7 +4,7 @@ import type { NextConfig } from "next";
  * Next.js Configuration for LinkQR AI - Final Stable Build
  */
 const nextConfig: NextConfig = {
-  output: "standalone",
+  // output: "standalone",
   trailingSlash: false,
   
   async headers() {
@@ -17,7 +17,9 @@ const nextConfig: NextConfig = {
       "https://*.cloudworkstations.dev",
       "https://*.firebaseapp.com",
       "https://*.web.app",
-      "https://*.firebase-preview.app"
+      "https://*.firebase-preview.app",
+      "https://google-ai-studio.firebaseapp.com",
+      "https://ais-dev-5lkslbtkhj6ypuwfow63ke-823663793753.asia-southeast1.run.app"
     ].join(' ');
 
     return [
@@ -41,9 +43,9 @@ const nextConfig: NextConfig = {
     ];
   },
   
-  // experimental: {
-  //   serverComponentsExternalPackages: ["@opentelemetry/sdk-node", "require-in-the-middle"],
-  // },
+  experimental: {
+    allowedDevOrigins: ["https://ais-dev-5lkslbtkhj6ypuwfow63ke-823663793753.asia-southeast1.run.app"],
+  } as any,
 };
 
 export default nextConfig;

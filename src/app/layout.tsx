@@ -1,3 +1,4 @@
+import './globals.css';
 import Script from 'next/script';
 import ClientProviders from '@/components/ClientProviders';
 import { getAdminDb } from '@/lib/firebase-admin';
